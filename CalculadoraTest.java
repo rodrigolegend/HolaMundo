@@ -24,29 +24,29 @@ public class CalculadoraTest {
         System.out.println("========================================");
 
         if (failed > 0) {
-            System.out.println("  BUILD FAILED ❌");
+            System.out.println("  BUILD FAILED ");
             System.exit(1);
         } else {
-            System.out.println("  BUILD PASSED ✅");
+            System.out.println("  BUILD PASSED ");
         }
     }
 
     static void check(String nombre, int obtenido, int esperado) {
         if (obtenido == esperado) {
-            System.out.printf("  ✅ PASS: %s%n", nombre);
+            System.out.printf("   PASS: %s%n", nombre);
             passed++;
         } else {
-            System.out.printf("  ❌ FAIL: %s → obtuvo %d, esperado %d%n", nombre, obtenido, esperado);
+            System.out.printf("   FAIL: %s → obtuvo %d, esperado %d%n", nombre, obtenido, esperado);
             failed++;
         }
     }
 
     static void checkBool(String nombre, boolean obtenido, boolean esperado) {
         if (obtenido == esperado) {
-            System.out.printf("  ✅ PASS: %s%n", nombre);
+            System.out.printf("   PASS: %s%n", nombre);
             passed++;
         } else {
-            System.out.printf("  ❌ FAIL: %s → obtuvo %b, esperado %b%n", nombre, obtenido, esperado);
+            System.out.printf("   FAIL: %s → obtuvo %b, esperado %b%n", nombre, obtenido, esperado);
             failed++;
         }
     }
