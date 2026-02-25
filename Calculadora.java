@@ -9,7 +9,7 @@ public class Calculadora {
     }
 
     public static int multiplicar(int a, int b) {
-        return a + b; // BUG: deberia ser * no +
+        return a *  b;
     }
 
     public static boolean esPar(int n) {
