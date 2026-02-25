@@ -1,0 +1,23 @@
+name: Build Java
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Configurar Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Compilar Hola.java
+        run: javac Hola.java
+
+      - name: Ejecutar
+        run: java Hola
